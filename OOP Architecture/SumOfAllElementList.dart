@@ -1,8 +1,9 @@
 //1. WAP to take a list using named parameter and return sum of all elements of list.
 
+import 'dart:html';
 import 'dart:io';
 
-int sumOfListElement(List<int> elements) {
+int sumOfListElement({required List<int> elements}) {
   int sum = 0;
   for (int i = 0; i < elements.length; i++) {
     sum += elements[i];
@@ -12,5 +13,5 @@ int sumOfListElement(List<int> elements) {
 
 void main() {
   List<int> sumList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  print("\nSum of list is : ${sumOfListElement(sumList)}\n");
+  print("\nSum of list is : ${sumOfListElement(elements:sumList)}\n");
 }
