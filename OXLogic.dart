@@ -70,7 +70,7 @@ class TicTacToe {
   }
 
   void _checkWinner() {
-    List<List<int>> winningCombinations = [
+    List<List<int>> winMatchConditions = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -81,7 +81,7 @@ class TicTacToe {
       [2, 4, 6]
     ];
 
-    for (List<int> combo in winningCombinations) {
+    for (List<int> combo in winMatchConditions) {
       if (showOX[combo[0]] == showOX[combo[1]] &&
           showOX[combo[0]] == showOX[combo[2]] &&
           showOX[combo[0]] != '') {
