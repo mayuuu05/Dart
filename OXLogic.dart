@@ -9,7 +9,7 @@ class TicTacToe {
   bool turnO = true;
   List<String> showOX = ['','','','','','','','',''];
   String resultDeclaration = '';
-  List<int> matchedIndexes = [];
+  
   int playerO = 0;
   int playerX = 0;
   int boxFill = 0;
@@ -86,7 +86,7 @@ class TicTacToe {
           showOX[combo[0]] == showOX[combo[2]] &&
           showOX[combo[0]] != '') {
         resultDeclaration = 'Player ${showOX[combo[0]]} Wins!';
-        matchedIndexes.addAll(combo);
+       
         _updateScrore(showOX[combo[0]]);
         return;
       }
@@ -111,7 +111,7 @@ class TicTacToe {
       showOX[i] = '';
     }
     resultDeclaration = '';
-    matchedIndexes = [];
+    
     boxFill = 0;
     winer = false;
   }
